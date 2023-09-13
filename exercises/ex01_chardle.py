@@ -13,7 +13,7 @@ if len(character) != 1:
     print("Error: Character must be a single character.")  # Part 4
     exit()
 
-print("Searching for " + word + " in " + character)
+print("Searching for " + character + " in " + word)
 
 # Part 2 - Checking Indices for Matches
 counter: int = 0  # Part 3 - Counting Matching Indices
