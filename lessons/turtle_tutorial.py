@@ -2,14 +2,14 @@
 
 __author__ = "730652641"
 
-from turtle import Turtle, colormode, done
+from turtle import Turtle, done 
 leo: Turtle = Turtle()
 
 leo.color("green")
 n: int = 0
-while n<200:
+while n < 200:
     leo.forward(n)
     leo.right(n)
-    n+=1
+    n += 1
 
 done()

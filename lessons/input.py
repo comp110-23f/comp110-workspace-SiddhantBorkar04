@@ -1,4 +1,4 @@
-"""Demonstrates asking the user for input"""
+"""Demonstrates asking the user for input."""
 
 
 user_name: str = input("What is your name? ")
