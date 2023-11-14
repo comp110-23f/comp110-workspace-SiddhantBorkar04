@@ -12,8 +12,8 @@ def invert(dict1: dict[str, str]) -> dict[str, str]:
         ref: int = 0
         for key2 in dict1:
             if (dict1[key] == dict1[key2]):
-                ref += 1
-            if (ref > 1):
+                ref = ref + 1
+            if ref > 1:
                 kill = True
         ref = 0
     if (kill):
@@ -36,10 +36,10 @@ def favorite_color(dict: dict[str, str]) -> str:
     current_color: str = ""
     most_color: str = ""
     for i in list_colors:
-        current_color = i
+        current_color = i.lower()
         current_ref = 0
         for n in list_colors:
-            if (i == n):
+            if (i.lower() == n.lower()):
                 current_ref += 1
         if (current_ref > most_refs):
             most_refs = current_ref
@@ -79,7 +79,12 @@ def update_attendance(og_dict: dict[str, list[str]], week_day: str, attend_stude
     """Adds new students who have attended class to the day keys of dictionary."""
     og_dict_update = og_dict
     if week_day in og_dict_update:
-        og_dict_update[week_day].append(attend_student)
+        add: bool = True
+        for i in range(0, len(og_dict_update[week_day])):
+            if (og_dict_update[week_day][i] == attend_student):
+                add = False
+        if add is True:
+            og_dict_update[week_day].append(attend_student)
     else:
         og_dict_update[week_day] = [attend_student]
     return og_dict_update
