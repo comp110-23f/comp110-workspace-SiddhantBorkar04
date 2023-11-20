@@ -4,7 +4,7 @@
 __author__ = "730652641"
 
 
-from dictionary import invert, favorite_color, count, alphabetizer, update_attendance
+from exercises.ex06.dictionary import invert, favorite_color, count, alphabetizer, update_attendance
 
 
 #  Tests for invert
